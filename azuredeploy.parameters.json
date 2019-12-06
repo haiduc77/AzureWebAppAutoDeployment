@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "test3"
+    },
+    "administratorLogin": {
+      "value": "AdrianVM"
+    },
+    "databaseName": {
+      "value": "test3db"
+    },
+    "VismaTaskAppPackageFolder": {
+      "value": "WebAppToDeploy"
+    },
+    "VismaTaskAppPackageFileName": {
+      "value": "https://raw.githubusercontent.com/haiduc77/AzureWebAppAutoDeployment/blob/master/WebAppToDeploy/webapplication.zip"
+    },
+    "skuName": {
+      "value": "B1"
+    }
+  }
+}
