@@ -11,12 +11,6 @@
     "databaseName": {
       "value": "test3db"
     },
-    "VismaTaskAppPackageFolder": {
-      "value": "WebAppToDeploy"
-    },
-    "VismaTaskAppPackageFileName": {
-      "value": "https://raw.githubusercontent.com/haiduc77/AzureWebAppAutoDeployment/blob/master/WebAppToDeploy/webapplication.zip"
-    },
     "skuName": {
       "value": "B1"
     }

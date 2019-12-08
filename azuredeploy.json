@@ -71,28 +71,8 @@
       "metadata": {
         "description": "Describes the performance level for Edition"
       }
-    },
-    "_artifactsLocation": {
-      "type": "string"
-    },
-    "_artifactsLocationSasToken": {
-      "type": "securestring"
-    },
-    "VismaTaskAppPackageFolder": {
-      "type": "string",
-      "minLength": 1,
-      "metadata": {
-        "description": "WebDeploy package location. This path is relative to the _artifactsLocation parameter"
-      }
-    },
-    "VismaTaskAppPackageFileName": {
-      "type": "string",
-      "minLength": 1,
-      "metadata": {
-        "description": "Name of the webdeploy package"
-      }
     }
-  },
+},
   "variables": {
     "webSiteName": "[concat('webSite', uniqueString(resourceGroup().id))]",
     "sqlserverName": "[concat('sqlserver', uniqueString(resourceGroup().id))]"
@@ -203,12 +183,9 @@
             "displayName": "VismaTaskApp"
           },
           "properties": {
-            "packageUri": "[concat(parameters('_artifactsLocation'), parameters('VismaTaskAppPackageFolder'), '/', parameters('VismaTaskAppPackageFileName'), parameters('_artifactsLocationSasToken'))]",
+            "packageUri": "https://github.com/haiduc77/AzureWebAppAutoDeployment/raw/master/WebAppToDeploy/webapplication.zip",
             "dbType": "None",
-            "connectionString": "",
-            "setParameters": {
-              "IIS Web Application Name": "[variables('webSiteName')]"
-            }
+            "connectionString": ""
           }
         }
       ]
